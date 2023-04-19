@@ -1,0 +1,72 @@
+:root {
+  --main: #171717;
+  --bg: #fafafa;
+  --accent: #4287f5;
+}
+
+body {
+  /* font-family: ; */
+  font-size: 20px;
+  color: var(--main);
+  background-color: var(--bg);
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+section {
+  padding: 40px 0;
+}
+h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.container {
+  padding: 0 20px;
+}
+.text-accent {
+  color: var(--accent);
+}
+
+.menu-list {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.menu-link {
+  display: flex;
+}
+.menu-link:hover {
+  color: red;
+}
+.dots {
+  /* width: 100%; */
+  display: inline-block;
+  border-bottom: 1px dotted var(--main);
+  flex-grow: 1;
+}
