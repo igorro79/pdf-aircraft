@@ -5,7 +5,7 @@
 }
 
 body {
-  /* font-family: ; */
+  font-family: "Montserrat";
   font-size: 20px;
   color: var(--main);
   background-color: var(--bg);
@@ -49,6 +49,19 @@ h1 {
 .container {
   padding: 0 20px;
 }
+.flex-conainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 820px) {
+  .flex-conainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4%;
+  }
+}
+
 .text-accent {
   color: var(--accent);
 }
@@ -69,4 +82,24 @@ h1 {
   display: inline-block;
   border-bottom: 1px dotted var(--main);
   flex-grow: 1;
+}
+
+.table-list,
+.table-item {
+  text-transform: uppercase;
+}
+
+.table-header {
+  padding: 4px 0;
+  background-color: var(--accent);
+  color: white;
+  text-align: center;
+}
+.table-item {
+  display: flex;
+}
+@media screen and (min-width: 820px) {
+  .table-list {
+    width: 48%;
+  }
 }
