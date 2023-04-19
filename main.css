@@ -2,6 +2,7 @@
   --main: #171717;
   --bg: #fafafa;
   --accent: #4287f5;
+  --pad: clamp(1rem, 2vw, 3rem);
 }
 
 body {
@@ -9,7 +10,7 @@ body {
   font-size: 20px;
   color: var(--main);
   background-color: var(--bg);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h1,
@@ -45,22 +46,29 @@ h1 {
   margin-bottom: 50px;
   text-align: center;
 }
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+h3,
+h4 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
 
 .container {
   padding: 0 20px;
 }
 .flex-conainer {
-  display: flex;
-  flex-direction: column;
+  columns: 23rem;
+  column-gap: calc(var(--pad) * 2);
 }
 
-@media screen and (min-width: 820px) {
+/* @media screen and (min-width: 820px) {
   .flex-conainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 4%;
+
   }
-}
+} */
 
 .text-accent {
   color: var(--accent);
@@ -70,6 +78,7 @@ h1 {
   gap: 10px;
   display: flex;
   flex-direction: column;
+  font-weight: bold;
 }
 .menu-link {
   display: flex;
@@ -77,13 +86,14 @@ h1 {
 .menu-link:hover {
   color: red;
 }
+
 .dots {
   /* width: 100%; */
   display: inline-block;
   border-bottom: 1px dotted var(--main);
   flex-grow: 1;
 }
-
+/* tables grid */
 .table-list,
 .table-item {
   text-transform: uppercase;
@@ -97,9 +107,45 @@ h1 {
 }
 .table-item {
   display: flex;
+  flex-shrink: 1;
+}
+
+.table-list {
+  margin-bottom: 1rem;
+}
+
+/* text page */
+
+.text-page-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.text-page-grid li {
+  margin-bottom: 20px;
+}
+.half-text-block {
+  text-align: justify;
 }
 @media screen and (min-width: 820px) {
-  .table-list {
+  .half-text-block {
+    width: 45%;
+    text-align: justify;
+  }
+}
+.half-text-block p {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 820px) {
+  .full-text-block {
+    display: flex;
+    gap: 4%;
+  }
+  .text-block-left-side {
+    width: 48%;
+  }
+  .text-block-right-side {
     width: 48%;
   }
 }
